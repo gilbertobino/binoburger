@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font: normal 20pt arial;
+        }
+    </style>
+</head>
+<body>
+   <script>
+       var n1 = Number(window.prompt('Qual seu salário?'))
+       var n2 = Number(window.prompt('Qual salário de sua esposa?'))
+       var s = n1 + n2
+       document.write(`A soma dos salários ${n1} e ${n2} são:<br/> ${s.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})} valor em real. <br/>`) //${s.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})} este comando me mostra o valo em moeda (real)
+       document.write(`${s.toLocaleString('pt-BR',{style:'currency',currency:'USD'})} valor em dolar. <br/>`) //${s.toLocaleString('pt-BR',{style:'currency',currency:'USD'})} este comando me mostra o valo em dolar
+       document.write(`${s.toLocaleString('pt-BR',{style:'currency',currency:'EUR'})} valor em euro.`) //${s.toLocaleString('pt-BR',{style:'currency',currency:'EUR'})} este comando me mostra o valo em euro
+       
+   </script>
+</body>
+</html>

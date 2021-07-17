@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style> 
+        div#area{
+            font: normal 20pt Arial;
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        } /*Configuração da div area*/
+    </style>
+</head>
+<body>
+    <!--<div id='area' onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"> Aqui eu configuro eventos DOM no HTML mas ele podem ser configurados também no JS-->
+    <div id='area'>
+        Interaja...
+    </div>
+    <script>
+        var a = window.document.getElementById('area') // Aqui eu faço a ligação do objeto 'a' dentro do JS com o elemento 'area' que está dentro do HTML
+        a.addEventListener('click', clicar) //Aqui eu configuro eventos DOM no JS usando EventListener
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+        function clicar(){            
+            a.innerText = 'Clicou!' //Esse comando faz mudar o texto Interaja... para Clicou!
+            a.style.background = 'red' //Esse comando faz mudar a cor da div de green para red
+        } //Aqui eu chamo o método clicar que pode estrar no HTML ou no JS
+        function entrar(){            
+            a.innerText = 'Entrou!'
+        }
+        function sair(){            
+            a.innerText = 'Saiu!'
+            a.style.background = 'green'
+        }
+    </script>
+</body>
+</html>

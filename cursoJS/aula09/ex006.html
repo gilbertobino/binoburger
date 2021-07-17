@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+       body {
+           background: rgb(68, 125, 169);
+           color: white;
+           font: normal 18pt Arial;
+       } 
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1> <!--DOM modelo de objeto para documentos-->
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div>Clique em min</div>
+    <div id="msg">Veja isso!!!</div>
+    <script>
+        var corpo = window.document.body //variável pro corpo dando acesso ao body
+        var p0 = window.document.getElementsByTagName ('p')[0] //seleção por marca, acessa o paragrafo 0
+        var p1 = window.document.getElementsByTagName ('p')[1] //seleção por marca, acessa o paragrafo 1
+        //var d = window.document.getElementById('msg') // seleção por classe, acessa o id msg
+        var d = window.document.querySelector('div#msg') // seleção por classe, esse método é mais recente      
+        window.document.write('Está escrito assim: ' + p1.innerText +'. '+ p0.innerText + ': ') //coloca ta tela os paragrafos selecionados
+        window.document.write(p1.innerHTML) // aqui ele coloca na tela o paragrafo com a formatação
+        p1.style.color = 'blue' //aqui eu mudo a cor do paragrafo marcado na variável
+        corpo.style.background = 'black' //aqui eu mudo a cor do corpo 
+        d.style.background = 'green' //aqui eu coloco a div msg na cor verde 
+        d.innerText = 'Estou aguardando' //aqui eu mudo o que está escrito na div msg    
+    </script>
+</body>
+</html>
